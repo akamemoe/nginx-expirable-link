@@ -24,8 +24,8 @@ def parse_duration(e):
 
 
 @click.command()
-@click.option("-e",default="1h",help="expires duration. eg: 9m/5h/1d")
-@click.option("-f",help="the file path base to alias or root directive value. eg: foo/bar.txt")
+@click.option("-e",default="1h",help="expires duration. i.e. 9m/5h/1d")
+@click.option("-f",help="the file path base to alias or root directive value. i.e. foo/bar.txt")
 def main(e,f):
     if not f:
         print("the parameter f can not be null")

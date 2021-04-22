@@ -12,6 +12,8 @@ sudo apt-get install nginx nginx-module-njs
 
 ### 2.CONFIGURATION
 
+configure your own secure key both in `authenticator.js` and `gen_link.py`,then run the following script. 
+
 ```bash
 cp nginx.conf /etc/nginx/nginx.conf
 cp authenticator.js /etc/nginx/authenticator.js
@@ -23,7 +25,7 @@ pip install click
 
 ### 3.USAGE
 
-assume that you have a file named `dog.jpg` which absolute path is `/home/admin/public/image/dog.jpg` and `alias` or `root` directive value is `/home/admin/public` in your nginx configuration, then you can generate expirable link by following command.
+assume that you have a file named `dog.jpg` which absolute path is `/home/admin/public/image/dog.jpg` and `alias` or `root` directive value is `/home/admin/public` in your nginx configuration, then you can generate expirable link by the following command.
 ```bash
-python gen_link.py -f image/dog.jpg -e 3h
+python gen_link.py -f image/dog.jpg -e 3h     #the generated link will be expires in 3 hours;
 ```
